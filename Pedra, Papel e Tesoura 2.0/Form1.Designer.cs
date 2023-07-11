@@ -39,6 +39,8 @@
             btm_resultado1 = new Label();
             bt_console = new Label();
             textBox1 = new TextBox();
+            btm_w = new Label();
+            btm_w2 = new Label();
             SuspendLayout();
             // 
             // bt_pedra
@@ -78,7 +80,7 @@
             bt_resultado.Size = new Size(348, 31);
             bt_resultado.TabIndex = 3;
             bt_resultado.Text = " ";
-            bt_resultado.TextChanged += bt_resultado_TextChanged;
+            
             // 
             // label1
             // 
@@ -115,6 +117,7 @@
             btm_resultado2.Size = new Size(22, 25);
             btm_resultado2.TabIndex = 7;
             btm_resultado2.Text = "0";
+            
             // 
             // btm_resultado1
             // 
@@ -124,6 +127,7 @@
             btm_resultado1.Size = new Size(22, 25);
             btm_resultado1.TabIndex = 8;
             btm_resultado1.Text = "0";
+            
             // 
             // bt_console
             // 
@@ -139,6 +143,23 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(348, 31);
             textBox1.TabIndex = 10;
+            
+            // 
+            // btm_w
+            // 
+            btm_w.AutoSize = true;
+            btm_w.Location = new Point(803, 60);
+            btm_w.Name = "btm_w";
+            btm_w.Size = new Size(0, 25);
+            btm_w.TabIndex = 11;
+            // 
+            // btm_w2
+            // 
+            btm_w2.AutoSize = true;
+            btm_w2.Location = new Point(803, 128);
+            btm_w2.Name = "btm_w2";
+            btm_w2.Size = new Size(0, 25);
+            btm_w2.TabIndex = 12;
             // 
             // Form1
             // 
@@ -146,6 +167,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(1060, 450);
+            Controls.Add(btm_w2);
+            Controls.Add(btm_w);
             Controls.Add(textBox1);
             Controls.Add(bt_console);
             Controls.Add(btm_resultado1);
@@ -176,5 +199,7 @@
         private Label btm_resultado1;
         private Label bt_console;
         private TextBox textBox1;
+        private Label btm_w;
+        private Label btm_w2;
     }
 }

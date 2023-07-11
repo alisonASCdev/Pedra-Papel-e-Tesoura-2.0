@@ -6,6 +6,9 @@ namespace Pedra__Papel_e_Tesoura_2._0
     {
         private string usuario, maquina;
         private string resultado;
+        private int pontosUsuario = 0;
+        private int pontosComputador = 0;
+        bool fimDeJogo = false;
 
         private string[] opcoes =  {
       "PEDRA",
@@ -18,13 +21,7 @@ namespace Pedra__Papel_e_Tesoura_2._0
             InitializeComponent();
 
 
-            int pontosUsuario = 0;
-            int pontosComputador = 0;
-            bool fimDeJogo = false;
-
-
-
-            //while (fimDeJogo != true)
+            // while (fimDeJogo != true)
         }
 
         private void SelecaoUsuario(string selecao)
@@ -35,20 +32,35 @@ namespace Pedra__Papel_e_Tesoura_2._0
 
             if (usuario == maquina)
             {
-
+                btm_w.Text = "Empate ";
+                btm_w2.Text = "Empate ";
             }
-            else if (usuario == "Pedra" && maquina == "Tesoura")
+            else if (usuario == "PEDRA" && maquina == "TESOURA")
             {
-
+                pontosUsuario++;
+                btm_w.Text = "Ganhou ";
+                btm_w2.Text = "Perdeu ";
             }
-            else if (usuario == "Papel" && maquina == "Pedra")
+            else if (usuario == "PAPEL" && maquina == "PEDRA")
             {
-
+                pontosUsuario++;
+                btm_w.Text = "Ganhou ";
+                btm_w2.Text = "Perdeu ";
             }
-            else if (usuario == "Tesoura" && maquina == "Papel")
+            else if (usuario == "TESOURA" && maquina == "PAPEL")
             {
-
+                pontosUsuario++;
+                btm_w.Text = "Ganhou ";
+                btm_w2.Text = "Perdeu ";
             }
+            else
+            {
+                pontosComputador++;
+                btm_w2.Text = "Ganhou ";
+                btm_w.Text = "perdeu";
+            }
+            btm_resultado1.Text = pontosUsuario.ToString();
+            btm_resultado2.Text = pontosComputador.ToString();
 
         }
         private void escolhaMaquina()
@@ -58,31 +70,27 @@ namespace Pedra__Papel_e_Tesoura_2._0
 
             maquina = opcoes[sorteio];
 
+            textBox1.Text = opcoes[sorteio].ToString();
+
+
         }
 
         private void bt_pedra_Click(object sender, EventArgs e)
         {
             int pedra;
-            SelecaoUsuario("Pedra");
+            SelecaoUsuario("PEDRA");
         }
 
         private void bt_papel_Click(object sender, EventArgs e)
         {
             int papel;
-            SelecaoUsuario("Papel");
+            SelecaoUsuario("PAPEL");
         }
 
         private void bt_tesoura_Click(object sender, EventArgs e)
         {
             int tesoura;
-            SelecaoUsuario("Tesoura");
-        }
-
-
-
-        private void bt_resultado_TextChanged(object sender, EventArgs e)
-        {
-
+            SelecaoUsuario("TESOURA");
         }
 
 
