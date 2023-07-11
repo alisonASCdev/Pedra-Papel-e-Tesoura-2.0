@@ -57,7 +57,7 @@ namespace Pedra__Papel_e_Tesoura_2._0
             {
                 pontosComputador++;
                 btm_w2.Text = "Ganhou ";
-                btm_w.Text = "perdeu";
+                btm_w.Text = "Perdeu";
             }
             btm_resultado1.Text = pontosUsuario.ToString();
             btm_resultado2.Text = pontosComputador.ToString();
